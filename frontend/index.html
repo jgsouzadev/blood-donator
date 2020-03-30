@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doe vida@Doe sangue</title>
+    <!-- liveserver plugin -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+   
+</head>
+
+<body>
+    <header>
+        <img src="doacao-de-sangue.jpg" alt="" class="logo">
+        <H2>A sua doação importa</H2>
+        <p>Até 3 vidas com uma doação</p>
+        <p>Mais de 38.000 doaçôes são necessárias todos os dias</p>
+        <p>Apenas 1,9% da população brasileira, doa sangue</p>
+        <button>Quero ajudar!</button>
+    </header>
+    <section class="form hide">
+        <h2>Entre na lista de doadores</h2>
+        <form action="/" method="POST">
+            <input type="text" name="name" placeholder="Nome completo">
+            <input type="text" name="email" placeholder="E-mail">
+            <input type="text" name="blood" placeholder="Tipo sanguineo">
+
+            <button>Quero ajudar!</button>
+        </form>
+    </section>
+    <main>
+        <h2>Ultimos <span >doadores</span ></h2>
+        <section class="donors">
+
+            {% for donor in donors %}
+            <div class="donor">
+                <div class="blood">{{donor.blood}}</div>
+                <P>{{donor.name}}</P>
+            </div>
+         
+            {%endfor%}
+        </section>
+    </main>
+    <footer>Com amor João Guilherme </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
