@@ -39,7 +39,7 @@ server.get("/", function(req, res){
     // res = resposta do servidor
     // req = requisição 
     db.query("SELECT * FROM donors", function(err, result) {
-        if(err) return res.send("Error de banco de dados")
+         if(err) return res.render("index_static.html")
         
         let donors = result.rows 
     return res.render("index.html", { donors })
@@ -68,7 +68,7 @@ server.post("/", function(req, res) {
 
         db.query(queryBD, values, function(err) {
 // fluxo de erro
-            if (err) return res.send("erro no banco de dados.")
+            if (err) return res.send("Configure o banco de dados.")
 // fluxo ideal
             return res.redirect("/")
         })
