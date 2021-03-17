@@ -13,7 +13,7 @@ Para poder executar a aplicação com 100% de funcionamento é necessario fazer 
 
 No bloco de código acima localizado em `backend/server.js` na linha `14`  está a configuração do banco de dados Postgres na minha maquina
 
-1 - Para o funcionamento, será necessario passar os paramétros do seu banco de dados PostGres e em seguida
+1 - Para o funcionamento, será necessário passar os paramétros do seu banco de dados PostGres e em seguida
 criar o banco de dados 'Bdonation' 
 
 2 - Após o passo acima crie a tabela `donors`
